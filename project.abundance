@@ -30,8 +30,8 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.5153949129852744,
-            "y": 0.6909620991253644,
+            "x": 0.4303882195448461,
+            "y": 0.6938775510204082,
             "uniqueID": 1731087553702,
             "ioValues": [
                 {
@@ -45,7 +45,7 @@
             ],
             "description": "Defines a Replicad code block.",
             "codeVersion": 1,
-            "code": "//Inputs:[input1, height];\n\nlet shape = drawRectangle(5,7)\n\nconst newPlane = new Plane().pivot(0, 'Y');\nconsole.log(library[input1])\nshape = library[input1].geometry[0].clone().scale(1.1)\nconsole.log(shape)\n\n return { geometry: [shape], tags: [],\n      color: '#A3CE5B',\n      plane: newPlane,\n      bom:[]}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+            "code": "//Inputs:[input1, height];\n\nlet shape = drawRectangle(5,7)\n\nconst newPlane = new Plane().pivot(0, 'Y');\nconst center =library[input1].geometry[0].boundingBox.center\n\nshape = library[input1].geometry[0].clone().scale(1.1, center)\nconsole.log(shape)\n\n return { geometry: [shape], tags: [],\n      color: '#A3CE5B',\n      plane: newPlane,\n      bom:[]}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
         },
         {
             "atomType": "Input",
@@ -59,8 +59,8 @@
         {
             "atomType": "Circle",
             "name": "Circle",
-            "x": 0.21758839528558477,
-            "y": 0.36734693877551017,
+            "x": 0.1539491298527443,
+            "y": 0.3323615160349854,
             "uniqueID": 1731087664456,
             "ioValues": [
                 {
@@ -73,7 +73,7 @@
         {
             "atomType": "Extrude",
             "name": "Extrude",
-            "x": 0.38955823293172687,
+            "x": 0.2884872824631861,
             "y": 0.44023323615160354,
             "uniqueID": 1731087666179,
             "ioValues": [
@@ -91,8 +91,8 @@
         {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.6346328195829556,
-            "y": 0.282798833819242,
+            "x": 0.6391659111514053,
+            "y": 0.29154518950437314,
             "uniqueID": 1731091700704,
             "ioValues": [
                 {
@@ -124,8 +124,8 @@
         {
             "atomType": "Join",
             "name": "Assembly",
-            "x": 0.8259292837715322,
-            "y": 0.5947521865889213,
+            "x": 0.825301204819277,
+            "y": 0.5043731778425656,
             "uniqueID": 1731091825974,
             "ioValues": [
                 {
