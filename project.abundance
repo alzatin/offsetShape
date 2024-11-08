@@ -39,7 +39,7 @@
                 },
                 {
                     "name": "perc",
-                    "ioValue": 1.05
+                    "ioValue": 10
                 }
             ],
             "description": "Defines a Replicad code block.",
